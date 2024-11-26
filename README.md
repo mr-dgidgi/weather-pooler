@@ -3,6 +3,9 @@ a pooler to request Meteo France API and save observation data to InfluxDB
 
 # Info
 
+[Data informations](https://donneespubliques.meteofrance.fr/client/document/descriptiftechnique_observations_donneespubliques_v1_20231222_341.pdf)
+
+
 ## Mandatory : 
 * an API Key from Meteo France (it's free) [Données d'observation](https://portail-api.meteofrance.fr/web/fr/api/DonneesPubliquesObservation)
 * An influxdb server
@@ -12,6 +15,7 @@ a pooler to request Meteo France API and save observation data to InfluxDB
   * configparser
   * requests
   * yaml
+
 
 ## List of stations
 This script can be use for multiples weatherstations. All the stations are set in ```station.yml```
