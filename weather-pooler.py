@@ -83,7 +83,6 @@ Write_api = Client.write_api(write_options=WriteOptions(flush_interval=300, max_
 
 for Station in StationList:
     AllData = get_data(MeteoApi,Station["id"])
-    print(AllData[0]['t_20'])
     DataFormated = {
         'lat':AllData[0]['lat'],
         'lon':AllData[0]['lon'],
@@ -119,7 +118,7 @@ for Station in StationList:
         "tags": Station,
         "fields": DataFormated
     }]
-    print(JsonBodyWeather)
-    #Write_api.write("Weather", InfluxOrg, JsonBodyWeather)
+    #print(JsonBodyWeather)
+    Write_api.write("Weather", InfluxOrg, JsonBodyWeather)
 
 time.sleep(1)
