@@ -1,0 +1,10 @@
+services:
+  poller:
+    image: "weather-poller"
+    volumes:
+      - type: bind
+        source: station.yml
+        target : /etc/weather-pooler/station.yml
+      - type: bind
+        source: config.ini
+        target: /etc/weather-pooler/config.ini
